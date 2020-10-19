@@ -1,43 +1,9 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
+import { resize, driverType, backType } from '../utils/lib'
+
 const ProductCard = ({ product }) => {
-  const resize = (image, option) => {
-    var imageService = '//img2.storyblok.com/'
-    var path = image.replace('//a.storyblok.com', '')
-    return imageService + option + path
-  }
-
-  const driverType = value => {
-    switch (value) {
-      case 'D':
-        return 'dynamic'
-      case 'BA':
-        return 'balanced armature'
-      case 'PM':
-        return 'planar magnetic'
-      case 'E':
-        return 'electrostatic'
-      case 'BC':
-        return 'bone conduction'
-      default:
-        return 'Unknown'
-    }
-  }
-
-  const backType = value => {
-    switch (value) {
-      case 'open':
-        return 'open back'
-      case 'semi':
-        return 'semi open'
-      case 'closed':
-        return 'closed back'
-      default:
-        return 'Unknown'
-    }
-  }
-
   return (
     <div className="mb-4 overflow-hidden bg-white rounded shadow-lg">
       <div className="px-8 py-4">
