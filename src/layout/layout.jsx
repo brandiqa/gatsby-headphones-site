@@ -10,6 +10,7 @@ import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 import { Link } from 'gatsby'
 
+import Navbar from './navbar'
 import Footer from './footer'
 import './layout.css'
 
@@ -25,12 +26,14 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <div className="flex flex-col">
-      <header>
-        <Link to="/">{data.site.siteMetadata?.title || `Title`}</Link>
-        <nav>Nav here</nav>
+    <div className="flex flex-col min-h-screen overflow-x-hidden">
+      <header className="container flex items-end justify-between px-4 mx-auto my-2">
+        <Link to="/" className="text-xl text-green-800 font-bold">
+          {data.site.siteMetadata?.title || `Title`}
+        </Link>
+        <Navbar />
       </header>
-      <main>{children}</main>
+      <main className="flex-1">{children}</main>
       <Footer />
     </div>
   )

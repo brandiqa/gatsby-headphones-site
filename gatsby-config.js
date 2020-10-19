@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Headphones`,
+    title: `Gatsby`,
     description: `Example E-Commerce Static Site with limited features built with Gridsome and Storyblok'`,
     author: `@myxsys`,
   },
