@@ -1,4 +1,5 @@
 import React from 'react'
+import { FaGithub } from 'react-icons/fa'
 
 const Footer = () => (
   <footer className="py-8 text-sm text-center text-gray-400 bg-gray-800">
@@ -20,11 +21,11 @@ const Footer = () => (
       </span>
 
       <a
-        href="https://github.com/brandiqa/gridsome-headphones-site"
+        href="https://github.com/brandiqa/gatsby-headphones-site"
         target="_blank"
         rel="noreferrer"
       >
-        Github
+        <FaGithub />
       </a>
     </div>
   </footer>
