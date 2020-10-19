@@ -12,19 +12,11 @@ const ComponentList = {
   placeholder: Placeholder,
 }
 
-// const DynamicComponent = ({ blok }) => {
-//   console.log('DC', blok)
-//   if (typeof ComponentList[blok.component] !== 'undefined') {
-//     const Component = ComponentList[blok.component]
-//     return <Component blok={blok} key={blok._uid} />
-//   }
-// }
-
-const DynamicComponent = type => {
+const Components = type => {
   if (typeof ComponentList[type] === 'undefined') {
     return Placeholder
   }
   return ComponentList[type]
 }
 
-export default DynamicComponent
+export default Components
