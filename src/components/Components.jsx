@@ -1,10 +1,12 @@
 import Hero from './Hero'
 import Page from './Page'
+import ProductList from './ProductList'
 import Placeholder from './Placeholder'
 
 const ComponentList = {
   page: Page,
   hero: Hero,
+  'product-list': ProductList,
   placeholder: Placeholder,
 }
 
