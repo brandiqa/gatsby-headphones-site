@@ -1,5 +1,6 @@
 import React from 'react'
 import Components from '../components/Components'
+import SEO from '../layout/seo'
 
 class StoryblokEntry extends React.Component {
   static getDerivedStateFromProps(props, state) {
@@ -23,10 +24,11 @@ class StoryblokEntry extends React.Component {
   }
 
   render() {
-    let content = this.state.story.content
+    const { name, content } = this.state.story
 
     return (
       <div>
+        <SEO title={name} />
         {React.createElement(Components(content.component), {
           key: content._uid,
           blok: content,
