@@ -2,6 +2,7 @@ import Hero from './Hero'
 import Page from './Page'
 import Product from './Product'
 import ProductList from './ProductList'
+import PageContent from './PageContent'
 import Placeholder from './Placeholder'
 
 const ComponentList = {
@@ -9,6 +10,7 @@ const ComponentList = {
   hero: Hero,
   'product-list': ProductList,
   product: Product,
+  'page-content': PageContent,
   placeholder: Placeholder,
 }
 
