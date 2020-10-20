@@ -9,7 +9,7 @@ module.exports = {
     enabled: process.env.NODE_ENV === 'production',
     content: [
       'src/components/**/*.jsx',
-      'src/layouts/**/*.jsx',
+      'src/layout/**/*.jsx',
       'src/pages/**/*.jsx',
     ],
   },
