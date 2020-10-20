@@ -1,5 +1,6 @@
 import React from 'react'
 import SbEditable from 'storyblok-react'
+import { FaCartArrowDown } from 'react-icons/fa'
 
 import Breadcrumb from './Breadcrumb'
 import { resize, driverType, backType } from '../utils/lib'
@@ -27,7 +28,8 @@ const Product = ({ blok }) => (
             <li>Impedance: {blok.impedance} Ohms</li>
           </ul>
           <button className="w-full py-4 mt-8 font-semibold text-center text-gray-200 bg-gray-800 md:mt-16 hover:bg-gray-900 hover:text-white">
-            ADD TO CART
+            <FaCartArrowDown className="inline mr-2 align-baseline" /> ADD TO
+            CART
           </button>
         </div>
       </div>
