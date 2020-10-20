@@ -5,7 +5,7 @@ const Footer = () => (
   <footer className="py-8 text-sm text-center text-gray-400 bg-gray-800">
     <div className="container flex flex-col justify-between px-8 mx-auto space-y-4 md:flex-row md:space-y-0">
       <span>Copyright @ 2020</span>
-      <span className="space-x-2">
+      <span className="space-x-2 footer-links">
         <span>Powered by</span>
         <a href="https://www.gatsbyjs.com/" target="_blank" rel="noreferrer">
           Gatsby
@@ -25,7 +25,7 @@ const Footer = () => (
         target="_blank"
         rel="noreferrer"
       >
-        <FaGithub />
+        <FaGithub className="text-xl text-green-400" />
       </a>
     </div>
   </footer>

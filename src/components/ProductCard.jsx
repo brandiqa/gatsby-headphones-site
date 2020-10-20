@@ -17,7 +17,7 @@ const ProductCard = ({ product }) => {
       <div className="flex justify-between px-2">
         <Link
           to={product.full_slug}
-          className="text-lg font-bold text-green-800"
+          className="text-lg font-bold tracking-tight hover:underline hover:text-gray-700"
         >
           {product.brand} {product.model}
         </Link>
