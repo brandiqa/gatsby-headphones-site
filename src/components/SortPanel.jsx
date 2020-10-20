@@ -6,7 +6,7 @@ const SortPanel = ({ totalCount, sortBy, updateSortBy }) => {
   }
 
   return (
-    <div className="flex items-center justify-between px-2 py-4 bg-gray-300 md:px-4">
+    <div className="flex items-center justify-between px-2 py-4 mx-4 bg-gray-300 md:px-4">
       <div className="inline-flex items-center space-x-2">
         <label
           className="font-semibold text-gray-700 text-md"
