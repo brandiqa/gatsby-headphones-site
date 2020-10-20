@@ -8,6 +8,11 @@ body {
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+/* nav links */
+.active {
+  @apply font-semibold text-green-800;
+}
+
 .footer-links > a {
   @apply font-semibold text-green-400;
 }

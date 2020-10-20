@@ -24,8 +24,9 @@ const Footer = () => (
         href="https://github.com/brandiqa/gatsby-headphones-site"
         target="_blank"
         rel="noreferrer"
+        className="text-green-400"
       >
-        <FaGithub className="text-xl text-green-400" />
+        <FaGithub className="inline text-xl" /> Source
       </a>
     </div>
   </footer>

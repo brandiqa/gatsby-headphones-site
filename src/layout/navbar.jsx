@@ -20,6 +20,7 @@ const Navbar = () => {
     <Link
       to={route.to}
       key={index}
+      activeClassName="active"
       className="text-green-900 font-mendium hover:underline hover:text-green-500 active:text-green-400"
     >
       {route.label}
