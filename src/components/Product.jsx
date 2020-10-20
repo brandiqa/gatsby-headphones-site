@@ -9,7 +9,7 @@ const Product = ({ blok }) => (
     <Breadcrumb page={blok.brand + ' ' + blok.model} />
     <div className="flex flex-col justify-center p-4 mt-4 bg-white md:space-x-16 md:flex-row place-items-center container-mx-auto">
       <div className="px-4">
-        <img src={resize(blok.image, 'fit-in/400x400')} />
+        <img src={resize(blok.image, 'fit-in/400x400')} alt={blok.name} />
       </div>
       <div className="px-4">
         <h2 className="text-4xl font-bold tracking-wider">
