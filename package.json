@@ -28,6 +28,7 @@
   },
   "devDependencies": {
     "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
     "prettier": "2.1.2",
     "tailwindcss": "^1.9.4"
   },

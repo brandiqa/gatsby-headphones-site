@@ -1,7 +1,11 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby`,
-    description: `Example E-Commerce Static Site with limited features built with Gridsome and Storyblok'`,
+    description: `Basic Static E-Commerce Site built with Gatsby, Storyblok and TailwindCSS`,
     author: `@myxsys`,
   },
   plugins: [
@@ -32,7 +36,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-storyblok',
       options: {
-        accessToken: 'BMwbQC9wS5S9uqUrctnWEwtt',
+        accessToken: `${process.env.STORYBLOK_TOKEN}`,
         homeSlug: 'home',
         version: process.env.NODE_ENV === 'production' ? 'published' : 'draft',
       },
