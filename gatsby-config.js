@@ -33,12 +33,13 @@ module.exports = {
     },
 
     `gatsby-plugin-postcss`,
+    // For options.version, use `process.env.NODE_ENV` syntax commented below
     {
       resolve: 'gatsby-source-storyblok',
       options: {
-        accessToken: `${process.env.STORYBLOK_TOKEN}`,
+        accessToken: 'JqdarF4197QZ3LCfIOM5eAtt', //`${process.env.STORYBLOK_TOKEN}`,
         homeSlug: 'home',
-        version: process.env.NODE_ENV === 'production' ? 'published' : 'draft',
+        version: 'production', // process.env.NODE_ENV === 'production' ? 'published' : 'draft',
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
