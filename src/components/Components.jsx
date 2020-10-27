@@ -3,6 +3,7 @@ import Page from './Page'
 import Product from './Product'
 import ProductList from './ProductList'
 import PageContent from './PageContent'
+import ContactForm from './ContactForm'
 import Placeholder from './Placeholder'
 
 const ComponentList = {
@@ -11,6 +12,7 @@ const ComponentList = {
   'product-list': ProductList,
   product: Product,
   'page-content': PageContent,
+  'contact-form': ContactForm,
   placeholder: Placeholder,
 }
 
