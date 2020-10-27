@@ -1,99 +1,69 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.com">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's default starter
-</h1>
+# GATSBY E-COMMERCE EXAMPLE SITE
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+This is an example E-Commerce JAMStack static website showcasing performance built using Storyblok, Gatsby and TailwindCSS. You can find the article on Sitepoint.com.
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
+The live version of this project can be found [here](https://gatsby-headphones.netlify.app/). Clone or Fork-Clone the project to your hard-drive then execute the following instructions in order.
 
-## 🚀 Quick start
+## Run Local Build
 
-1.  **Create a Gatsby site.**
+This project accesses data from SitePoint's StoryBlok account. A public read-only API key is configured at `gatsby-config.js`. Run the following commands to get the demo up and running quickly.
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+```bash
+# install dependencies
+$ npm install # Or yarn install
 
-    ```shell
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
-    ```
+# serve with hot reload at localhost:8000
+$ npm run develop # or yarn dev
+```
 
-1.  **Start developing.**
+If you would like to manipulate data, you will need a Storyblok account. Simply go through the following instructions, Step 1 - 3:
 
-    Navigate into your new site’s directory and start it up.
+## 1. Using your own StoryBlok Account
 
-    ```shell
-    cd my-default-starter/
-    gatsby develop
-    ```
+1. [Register](https://app.storyblok.com/#!/signup) at Storyblok for free.
+2. Create a new Space and copy the preview token from Dashboard > Settings > API Keys pages
+3. Create an `.env.development` file and save the token key-value as : `STORYBLOK_TOKEN=<token>`
+4. In `gatsby-config.js`, look for and replace the value for `accessToken` to `process.env.STORYBLOK_API,` within the `gatsby-source-storyblok` plugin configuration section.
 
-1.  **Open the source code and start editing!**
+## 2. Import Necessary components
 
-    Your site is now running at `http://localhost:8000`!
+You can import the example components through the file `seed.components.json` with the [Storyblok CLI](https://github.com/storyblok/storyblok#push-components). For this you will need your space ID, which you can find in your space **settings**.
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.com/tutorial/part-five/#introducing-graphiql)._
+First you need to install the Storyblok CLI
 
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+```bash
+# Install Storyblok CLI if you have not already
+npm install -g storyblok # or yarn global add storyblok
+```
 
-## 🧐 What's inside?
+Then you can push the existing `seed.components.json` structure to Storyblok.
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+```bash
+# how to use
+storyblok push-components <SOURCE> --space <SPACE_ID>
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
+# example
+storyblok push-components ./seed.components.json --space 12345
+```
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+After the import you will have all the components under `Components` in your left sidebar.
 
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+## 3. Create Content
 
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+Feel free to create content any way you like. Unfortunately, the navbar menu links are hard-coded. Here's a quick guide you can follow:
 
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
+1. Home Page(`/home` or `/`): delete all existing components. Add `PageTitle` and `ProductList` components. Fill in the fields accordingly
+2. Create Products(`/products`) folder with type Product
+3. Inside the Product folder, create multiple products. Make sure to fill in all the fields
+4. Create About (`/about`) page. Add `PageTitle` and `PageContent` components.
+5. Create Contact(`/contact`) page. Add `PageTitle` and `ContactForm`.
 
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.com/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+Make sure to hit publish otherwise the content won't be visible on production builds.
 
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.com/docs/gatsby-config/) for more detail).
+## License
 
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.com/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.com/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-9.  **`LICENSE`**: This Gatsby starter is licensed under the 0BSD license. This means that you can see this file as a placeholder and replace it with your own license.
-
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
-
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
-
-12. **`README.md`**: A text file containing useful reference information about your project.
-
-## 🎓 Learning Gatsby
-
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.com/). Here are some places to start:
-
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-## 💫 Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/gatsbyjs/gatsby-starter-default)
-
-<!-- AUTO-GENERATED-CONTENT:END -->
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

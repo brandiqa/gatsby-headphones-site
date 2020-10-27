@@ -1,0 +1,268 @@
+{
+  "components": [
+    {
+      "name": "contact-form",
+      "display_name": null,
+      "created_at": "2020-10-27T16:55:27.526Z",
+      "updated_at": "2020-10-27T16:55:27.526Z",
+      "id": 1165476,
+      "schema": {},
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "contact-form",
+      "component_group_uuid": null
+    },
+    {
+      "name": "hero",
+      "display_name": null,
+      "created_at": "2020-10-14T13:32:02.160Z",
+      "updated_at": "2020-10-14T13:32:12.273Z",
+      "id": 1145167,
+      "schema": {
+        "headline": {
+          "type": "text"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "hero",
+      "component_group_uuid": null
+    },
+    {
+      "name": "page",
+      "display_name": null,
+      "created_at": "2020-10-12T12:14:19.024Z",
+      "updated_at": "2020-10-12T12:14:19.024Z",
+      "id": 1141855,
+      "schema": {
+        "body": {
+          "type": "bloks"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": true,
+      "preview_tmpl": null,
+      "is_nestable": false,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "page",
+      "component_group_uuid": null
+    },
+    {
+      "name": "page-content",
+      "display_name": null,
+      "created_at": "2020-10-16T18:36:48.172Z",
+      "updated_at": "2020-10-16T19:34:49.836Z",
+      "id": 1149495,
+      "schema": {
+        "content": {
+          "type": "richtext",
+          "required": true
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "page-content",
+      "component_group_uuid": null
+    },
+    {
+      "name": "product",
+      "display_name": null,
+      "created_at": "2020-10-12T12:14:54.885Z",
+      "updated_at": "2020-10-16T11:34:10.138Z",
+      "id": 1141859,
+      "schema": {
+        "padType": {
+          "type": "option",
+          "use_uuid": true,
+          "default_value": "",
+          "options": [
+            {
+              "value": "on-ear",
+              "name": "On Ear"
+            },
+            {
+              "value": "over-ear",
+              "name": "Over Ear"
+            },
+            {
+              "value": "in-ear",
+              "name": "In Ear"
+            }
+          ],
+          "pos": 0
+        },
+        "backType": {
+          "type": "option",
+          "pos": 1,
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "closed",
+              "name": "Closed Back"
+            },
+            {
+              "value": "semi",
+              "name": "Semi Open"
+            },
+            {
+              "value": "open",
+              "name": "Open Back"
+            }
+          ]
+        },
+        "driver": {
+          "type": "option",
+          "pos": 2,
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "D",
+              "name": "Dynamic"
+            },
+            {
+              "value": "BA",
+              "name": "Balanced Armature"
+            },
+            {
+              "value": "PM",
+              "name": "Planar Magnetic"
+            },
+            {
+              "value": "E",
+              "name": "Electrostatic"
+            },
+            {
+              "value": "BC",
+              "name": "Bone Conduction"
+            }
+          ]
+        },
+        "brand": {
+          "type": "option",
+          "pos": 3,
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "AKG",
+              "name": "AKG"
+            },
+            {
+              "value": "Aftershokz",
+              "name": "Aftershokz"
+            },
+            {
+              "value": "Audeze",
+              "name": "Audeze"
+            },
+            {
+              "value": "Beyerdynamic",
+              "name": "Beyerdynamic"
+            },
+            {
+              "value": "Eken",
+              "name": "Eken"
+            },
+            {
+              "value": "Focal",
+              "name": "Focal"
+            },
+            {
+              "value": "Grado",
+              "name": "Grado"
+            },
+            {
+              "value": "HIFIMAN",
+              "name": "HIFIMAN"
+            },
+            {
+              "value": "Philips",
+              "name": "Philips"
+            },
+            {
+              "value": "Sennheiser",
+              "name": "Sennheiser"
+            },
+            {
+              "value": "Sony",
+              "name": "Sony"
+            },
+            {
+              "value": "STAX",
+              "name": "STAX"
+            }
+          ]
+        },
+        "model": {
+          "type": "text",
+          "pos": 4
+        },
+        "price": {
+          "type": "number",
+          "pos": 5
+        },
+        "image": {
+          "type": "image",
+          "pos": 6,
+          "filetypes": []
+        },
+        "tab-19a7dfa7-077f-476a-b1e6-a4307872c97d": {
+          "type": "tab",
+          "display_name": "Specs",
+          "keys": [
+            "padType",
+            "backType",
+            "driver",
+            "impedance"
+          ],
+          "pos": 7
+        },
+        "impedance": {
+          "type": "number"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": true,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "product",
+      "component_group_uuid": null
+    },
+    {
+      "name": "product-list",
+      "display_name": null,
+      "created_at": "2020-10-14T14:24:28.383Z",
+      "updated_at": "2020-10-14T14:24:28.383Z",
+      "id": 1145306,
+      "schema": {},
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "product-list",
+      "component_group_uuid": null
+    }
+  ]
+}
